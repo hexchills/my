@@ -1,0 +1,37 @@
+alias pipup="pip list --outdated --format=freeze | grep -v '^\-e' | cut -d = -f1  | xargs -n1 pip install -U"
+alias up="sudo dnf update && flatpak update && pipup"
+alias start="sudo dnf clean all && sudo dnf update && flatpak update"
+alias con="toolbox enter"
+alias xmr="curl rate.sx/xmr@10d"
+alias eth="curl rate.sx/eth@10d"
+alias btc="curl rate.sx/btc@10d"
+alias crypto="curl rate.sx"
+alias ker="ping gnu.org"
+alias xb="xmr && btc"
+alias ls="lsd -l"
+alias img="wezterm imgcat"
+alias netw="sudo service NetworkManager restart"
+alias ubuntu="podman exec -ti --user unknown --privileged ubuntu /bin/bash"
+alias ubuntu-start="podman start ubuntu ubuntu"
+alias ubuntu-stop="podman stop ubuntu ubuntu"
+alias dns-restart="sudo systemctl restart systemd-resolved.service && sudo service NetworkManager restart"
+alias less="bat --theme Dracula -p --paging always"
+alias qr='qrencode -m 2 -t utf8 <<< "$1"'
+alias urldecode='python3 -c "import sys, urllib.parse as ul; \
+    print(ul.unquote_plus(sys.argv[1]))"'
+alias urlencode='python3 -c "import sys, urllib.parse as ul; \
+    print (ul.quote_plus(sys.argv[1]))"'
+alias xclip="xclip -selection c"
+alias wget="wget2"
+fcd() {
+  cd "$(find -type d | fzf)"
+}
+
+open() {
+  xdg-open "$(find -type f | fzf)"
+}
+
+url() {
+  xdg-open "https://$1/"
+}
+eval "$(starship init zsh)"
