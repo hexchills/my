@@ -1,0 +1,21 @@
+podman pull docker.io/library/ubuntu
+podman run -ti --name ubuntu ubuntu/ubuntu:latest /bin/bash
+
+# install neofetch for test
+
+podman start ubuntu ubuntu
+podman exec -ti --privileged ubuntu /bin/bash
+
+# sudo apt update && sudo apt upgrade && sudo apt install sudo (kali-linux-headless - for kali) neovim htop
+
+# setup user:
+# adduser {username}
+# usermod -aG sudo {username}
+
+podman exec -ti --user {username} --privileged ubuntu /bin/bash
+
+# cd /home/{username} 
+# echo "zsh" >> .bashrc
+# echo "cd /home/{username}" >> .zshrc
+
+podman exec -ti --user {username} --privileged ubuntu /bin/zsh

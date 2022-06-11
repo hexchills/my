@@ -1,0 +1,12 @@
+# Install apps
+- wezterm
+
+# Gnome extensions
+- Blur my Shell - https://extensions.gnome.org/extension/3193/blur-my-shell/
+- Transparent Top Bar - https://extensions.gnome.org/extension/1708/transparent-top-bar/
+
+# block Brave domains:
+0.0.0.0    redirector.brave.com
+0.0.0.0    componentupdater.brave.com
+0.0.0.0    go-updater.brave.com
+0.0.0.0    variations.brave.com

@@ -1,0 +1,12 @@
+1. Choose Libre-DoT server: blahdns.de, snopyta.org, dismail.de
+2. sudo nvim /etc/systemd/resolved.conf:
+  
+DNS=116.202.176.26:854#dot.libredns.gr
+FallbackDNS=127.0.0.1 ::1
+Domains=~.
+DNSOverTLS=yes
+  
+3. Remove auto-dns in Network Settings and insert resolv ip -> 127.0.0.53
+4. sudo systemctl restart systemd-resolved.service && sudo service NetworkManager restart
+
+# Check with: DoT: sudo ngrep port 853 / DNS: sudo ngrep port 53

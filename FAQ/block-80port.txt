@@ -1,0 +1,6 @@
+# "<--Block HTTP:80-->"
+
+# sudo firewall-cmd --permanent --direct --add-rule ipv4 filter OUTPUT 0 -p tcp -m tcp --dport 80 -j REJECT
+# sudo firewall-cmd --permanent --direct --add-rule ipv6 filter OUTPUT 0 -p tcp -m tcp --dport 80 -j REJECT
+
+# sudo firewall-cmd --reload
