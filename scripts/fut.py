@@ -1,5 +1,4 @@
 #!/bin/python3
-#!/bin/bash
 
 import sys
 import pandas as pd
@@ -10,6 +9,7 @@ def Script():
     SIDE = sys.argv[1]
     SIZE = float(sys.argv[2])
     PERC = 0.85
+
     if SIDE == "-l":
         long = ((POS * SIZE) / 100 + POS)
         long1 = str(long)
