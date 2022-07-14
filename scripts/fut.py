@@ -1,19 +1,30 @@
 #!/bin/python3
 
-import sys
 import pandas as pd
 
 
 def Script():
-    POS = float(sys.argv[3])
-    SIDE = sys.argv[1]
-    SIZE = float(sys.argv[2])
+
+    print("size. (long - l / short - s)")
+    SIDE = input("> ")
+
+    print()
+
+    print("percent. (default - 0.165)")
+    SIZE = float(input("> ") or "0.165")
+
+    print()
+
+    print("price. (example: 1011) ETH/USD")
+    POS = float(input("> ").replace(",", ""))
+
     PERC = 0.85
 
-    if SIDE == "-l":
+    if SIDE == "l":
         long = ((POS * SIZE) / 100 + POS)
         long1 = str(long)
         long2 = long1[0:7]
+        print("\nLimit Order:")
         print(long2)
         df = pd.DataFrame([long2])
         df.to_clipboard(index=False, header=False)
@@ -25,10 +36,11 @@ def Script():
         print("\nStop Loss:")
         print(tt0[1:7])
 
-    elif SIDE == "-s":
+    elif SIDE == "s":
         short = ((POS * SIZE) / 100 - POS)
         short1 = str(short)
         short2 = short1[1:8]
+        print("\nLimit Order:")
         print(short2)
         df1 = pd.DataFrame([short2])
         df1.to_clipboard(index=False, header=False)
