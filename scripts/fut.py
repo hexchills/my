@@ -5,12 +5,12 @@ import pandas as pd
 print("size. (long - l / short - s)")
 SIDE = input("> ")
 
-print()
+print("---" * 9)
 
 print("percent. (default - 0.165)")
 SIZE = float(input("> ") or "0.165")
 
-print()
+print("---" * 9)
 
 print("price. (example: 1011) ETH/USD")
 POS = float(input("> ").replace(",", ""))
