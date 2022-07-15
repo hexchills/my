@@ -7,8 +7,8 @@ SIDE = input("> ")
 
 print("---" * 9)
 
-print("percent. (default - 0.15)")
-SIZE = float(input("> ") or "0.15")
+print("percent. (default - 0.159)")
+SIZE = float(input("> ") or "0.159")
 
 print("---" * 9)
 
