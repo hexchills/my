@@ -1,7 +1,5 @@
 #!/bin/bash
 
-cat ../.config/aliases_zsh >> ~/.zshrc ;
-
 # zsh-autosugestions
 git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions ;
 
