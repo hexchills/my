@@ -11,21 +11,19 @@ flatpak install flathub io.freetubeapp.FreeTube -y
 flatpak install flathub com.github.Eloston.UngoogledChromium -y
 flatpak install com.vscodium.codium -y
 flatpak install com.github.tchx84.Flatseal -y
-flatpak install flathub io.gitlab.librewolf-community -y
 flatpak install flathub fr.romainvigier.MetadataCleaner -y
 flatpak install flathub com.github.micahflee.torbrowser-launcher -y
-flatpak install com.system76.Popsicle -y
 flatpak install flathub com.mattjakeman.ExtensionManager -y
 flatpak install flathub net.cozic.joplin_desktop -y
 flatpak install flathub com.github.ryonakano.pinit -y
 
-sudo dnf install croc homebank thefuck wget2 yt-dlp torsocks intel-opencl xclip qrencode g++ evolution minder cmake lm_sensors-libs zstd zulucrypt qbittorrent flatpak-selinux distrobox rclone python3-devel python3-virtualenv gnome-extensions-app srm megatools fontawesome-fonts yarnpkg nodejs testdisk telegram-desktop  cheat emacs ripgrep file-roller-nautilus ngrep badwolf httpie openssl starship lsd sway rescene ffmpeg age chkrootkit drawing rkhunter fzf git fd-find ncdu android-tools gnome-feeds gtkhash java-11-openjdk-devel docker yaru-gtk4-theme yaru-icon-theme celluloid mpv aria2 foliate lynx speedtest-cli vim gimp icecat zsh dino wireguard-tools bat exa neofetch gnome-tweaks neovim @virtualization okular toolbox podman feh htop ruby go tor nmap claws-mail claws-mail-plugins-pgp claws-mail-plugins-litehtml-viewer gparted keepassxc kleopatra pwgen wireshark bleachbit epiphany telnet gparted ftp dash weechat aircrack-ng ;
-
-pip3 install qrcode ;
+sudo dnf install gcolor3 python3-pyperclip google-roboto-fonts ShellCheck pipenv python3-nose-testconfig python3-isort dnscrypt-proxy tldr docker-compose sl croc homebank thefuck wget2 yt-dlp torsocks intel-opencl xclip qrencode g++ evolution minder cmake lm_sensors-libs zstd zulucrypt qbittorrent flatpak-selinux distrobox rclone python3-devel python3-virtualenv gnome-extensions-app srm pixiewps megatools fontawesome-fonts yarnpkg nodejs testdisk telegram-desktop  cheat emacs ripgrep file-roller-nautilus ngrep badwolf httpie openssl starship lsd sway rescene ffmpeg age chkrootkit drawing rkhunter fzf git fd-find ncdu android-tools gnome-feeds gtkhash java-11-openjdk-devel docker yaru-gtk4-theme yaru-icon-theme celluloid mpv aria2 foliate lynx speedtest-cli vim gimp zsh dino wireguard-tools bat exa neofetch gnome-tweaks neovim @virtualization okular toolbox podman feh htop ruby go tor nmap claws-mail claws-mail-plugins-pgp claws-mail-plugins-litehtml-viewer gparted keepassxc kleopatra pwgen wireshark bleachbit epiphany telnet gparted ftp dash weechat aircrack-ng ;
 
 podman pull docker.io/library/ubuntu ;
 podman pull docker.io/library/fedora ;
 podman pull docker.io/library/alpine ;
+
+pip install castero
 
 # WezTerm
 mkdir ~/.config/wezterm ;
