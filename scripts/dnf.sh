@@ -6,6 +6,7 @@ sudo flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub
 
 sudo dnf update -y && flatpak update ;
 
+flatpak install flathub io.gitlab.librewolf-community -y
 flatpak install flathub com.github.gi_lom.dialect -y
 flatpak install flathub io.freetubeapp.FreeTube -y
 flatpak install flathub com.github.Eloston.UngoogledChromium -y
