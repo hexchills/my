@@ -1,5 +1,5 @@
 
-sudo cryptsetup luksFormat -c serpent-xts-plain64 -s 512 -h blake2b-512 /dev/sdb1
+sudo cryptsetup luksFormat --iter-time 15000 -c serpent-xts-plain64 -s 512 -h blake2b-512 --use-random /dev/sdb1
 sudo cryptsetup open /dev/sdb1 drive
 sudo mkfs.btrfs /dev/mapper/drive
 mount /dev/mapper/drive /mnt
